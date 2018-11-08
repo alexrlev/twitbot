@@ -1,6 +1,6 @@
-# ExampleBot
+# twitbot
 
-This bot retweets the latest tweet using the ["`#mediaarts`"][twitter-mediaarts] hashtag. It attempts to retweet once per hour.
+This bot combines phrases from two arrays to tweet with one image randomly selected from the images folder. It attempts to tweet every two hours.
 
 _Note: you must be comfortable using your computer's command line interface to use this bot. If you've never used it, there are tutorials for [macOS](http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line) and [Windows](http://www.bleepingcomputer.com/tutorials/windows-command-prompt-introduction/)._
 
@@ -45,6 +45,10 @@ Now type the following in the command line in your project directory:
 
 `node bot.js`
 
-Hopefully at this point you see a message like "Success! Check your bot, it should have retweeted something." Check the Twitter account for your bot, and it should have retweeted a tweet with the #mediaarts hashtag.
+Hopefully at this point you see a couple messages about opening the images, uploading, and successfully tweeting.
 
-[twitter-mediaarts]:https://twitter.com/hashtag/mediaarts
+I built this using these two githubs as tutorials: https://github.com/dariusk/examplebot
+
+https://github.com/nisrulz/twitterbot-nodejs
+
+The Twitter developer site is also a great resource!
