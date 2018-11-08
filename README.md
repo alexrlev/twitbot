@@ -54,3 +54,5 @@ I built this using these two githubs as tutorials: https://github.com/dariusk/ex
 https://github.com/nisrulz/twitterbot-nodejs
 
 The Twitter developer site is also a great resource!
+
+Follow my bot (https://twitter.com/botisdoingok) for its cute, wholesome posts! (also because I like the validation)
