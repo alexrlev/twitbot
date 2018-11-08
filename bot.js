@@ -1,6 +1,6 @@
-// Our Twitter library
+// Twitter library
 var Twit = require('twit');
-// We need to include our configuration file
+// Need to include configuration file
 var T = new Twit(require('./config.js'));
 
 var fs = require('fs');
@@ -67,6 +67,7 @@ function chooseRandom(myArray) {
   return myArray[Math.floor(Math.random() * myArray.length)];
 }
 
+//randomly select strings from arrays
 function random_from_array(images){
 	return images[Math.floor(Math.random() * images.length)];
 }
@@ -75,15 +76,20 @@ var tweetInd = 1;
 
 function upload_random_image(images){
 
+  //combine the two randomly-selected strings for one full phrase
 	var lovePhrase = chooseRandom(lovePhrases1) + chooseRandom(lovePhrases2);
   //612 possible phrases
 
 	console.log('Opening an image...');
   var image_path = path.join(__dirname, '/images/' + random_from_array(images)),
   b64content = fs.readFileSync(image_path, { encoding: 'base64' });
+  //media has to be in base 64 to be uploaded (according to Twitter)
 
   console.log('Uploading an image...');
 
+  //media/upload and statuses/update are Twitter-specific functions
+  //check Twitter developer site for more information or other function
+  //(such as rewteeting and favoriting)
   T.post('media/upload', { media_data : b64content }, function (err, data, response) {
       if (err){
 	      console.log('ERROR:');
@@ -95,7 +101,7 @@ function upload_random_image(images){
 	      T.post('statuses/update', {
 	        		status: lovePhrase,
 	        		media_ids: new Array(data.media_id_string)
-	      		},
+	      		}, //status: and media_ids: are also Twitter's own variable names
 	        	function(err, data, response) {
 	        		if (err){
 	            		console.log('ERROR:');
@@ -103,6 +109,7 @@ function upload_random_image(images){
 	          		} else{
 	            		console.log('Tweet #' + tweetInd + ' posted!');
                   tweetInd = tweetInd + 1;
+                  //checking to see which tweets are successful
 	          		}
 	        	}
 	     	);
@@ -110,6 +117,8 @@ function upload_random_image(images){
   	});
 }
 
+//make sure that your images folder is in the same folder or change '/images'
+//in order to reflect your name and location of your images
 fs.readdir(__dirname + '/images', function(err, files) {
 	if (err){
     	console.log(err);
@@ -120,8 +129,12 @@ fs.readdir(__dirname + '/images', function(err, files) {
       		images.push(f);
     	});
   	}
+    //initial post to start timer
   	upload_random_image(images);
+    //setting timer after initial post for every 2 hours
   	setInterval(function(){
     	upload_random_image(images);
     	}, 2 * 1000 * 60 * 60);
+      //1000 miliseconds -> seconds
+      //seconds -> minutes -> 2 hours
 });
