@@ -18,7 +18,7 @@ This installs some code to the `npm_modules` subdirectory, which you don't need 
 
 At this point you need to register a Twitter account and also get its "app info".
 
-So create a Twitter account for whatever account you want to tweet this stuff. Twitter doesn't allow you to register multiple twitter accounts on the same email address. I used my normal gmail account and added &something before the @ sign (i.e. alexrlev&something@gmail.com). Once you register the account to that email address, wait for the confirmation email. Then go here and log in as the Twitter account for your bot:
+So create a Twitter account for whatever account you want to tweet this stuff. Twitter doesn't allow you to register multiple twitter accounts on the same email address. I used my normal gmail account and added +something before the @ sign (i.e. alexrlev+something@gmail.com). Once you register the account to that email address, wait for the confirmation email. Then go here and log in as the Twitter account for your bot:
 
 https://apps.twitter.com/app/new
 
