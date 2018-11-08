@@ -1,12 +1,12 @@
-# ExampleBot
+# twitbot
 
-This bot retweets the latest tweet using the ["`#mediaarts`"][twitter-mediaarts] hashtag. It attempts to retweet once per hour.
+This bot combines phrases from two arrays to tweet with one image randomly selected from the images folder. It attempts to tweet every two hours.
 
 _Note: you must be comfortable using your computer's command line interface to use this bot. If you've never used it, there are tutorials for [macOS](http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line) and [Windows](http://www.bleepingcomputer.com/tutorials/windows-command-prompt-introduction/)._
 
 ## Installation
 
-If you don't already have have them, please install [Node.js](http://nodejs.org/). This will install two programs: `node`, which runs JavaScript from the command line, and `npm`, which helps you install software that Node.js can run.
+If you don't already have have them, install [Node.js](http://nodejs.org/). This will install two programs: `node`, which runs JavaScript from the command line, and `npm`, which helps you install software that Node.js can run.
 
 Make an empty project directory somewhere convenient for you, [download the archive zip file](https://github.com/dariusk/examplebot/archive/master.zip), and unzip the contents to your project directory. Go to your project directory in the command line. There should be four files there: `.gitignore`, `README.md`, `bot.js` and `config.js`. In that directory type:
 
@@ -18,7 +18,7 @@ This installs some code to the `npm_modules` subdirectory, which you don't need 
 
 At this point you need to register a Twitter account and also get its "app info".
 
-So create a Twitter account for whatever account you want to tweet this stuff. Twitter doesn't allow you to register multiple twitter accounts on the same email address. I recommend you create a brand new email address (perhaps using Gmail) for the Twitter account. Once you register the account to that email address, wait for the confirmation email. Then go here and log in as the Twitter account for your bot:
+So create a Twitter account for whatever account you want to tweet this stuff. Twitter doesn't allow you to register multiple twitter accounts on the same email address. I used my normal gmail account and added &something before the @ sign (i.e. alexrlev&something@gmail.com). Once you register the account to that email address, wait for the confirmation email. Then go here and log in as the Twitter account for your bot:
 
 https://apps.twitter.com/app/new
 
@@ -45,6 +45,10 @@ Now type the following in the command line in your project directory:
 
 `node bot.js`
 
-Hopefully at this point you see a message like "Success! Check your bot, it should have retweeted something." Check the Twitter account for your bot, and it should have retweeted a tweet with the #mediaarts hashtag.
+Hopefully at this point you see a couple messages about opening the images, uploading, and successfully tweeting.
 
-[twitter-mediaarts]:https://twitter.com/hashtag/mediaarts
+I built this using these two githubs as tutorials: https://github.com/dariusk/examplebot
+
+https://github.com/nisrulz/twitterbot-nodejs
+
+The Twitter developer site is also a great resource!
