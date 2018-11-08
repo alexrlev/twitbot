@@ -47,17 +47,10 @@ Now type the following in the command line in your project directory:
 
 Hopefully at this point you see a couple messages about opening the images, uploading, and successfully tweeting.
 
-<<<<<<< HEAD
-=======
 For me, my laptop has to be on and I have to leave the command prompt open in order for the bot to continue to post every two hours. Otherwise, the function is cancelled and ended.
 
->>>>>>> 887956c2dc65097421a344e8b9205fc55023f792
 I built this using these two githubs as tutorials: https://github.com/dariusk/examplebot
 
 https://github.com/nisrulz/twitterbot-nodejs
 
-<<<<<<< HEAD
 The Twitter developer site is also a great resource!
-=======
-The Twitter developer site is also a great resource!
->>>>>>> 887956c2dc65097421a344e8b9205fc55023f792
